@@ -8,9 +8,9 @@ import * as switchModule from "tns-core-modules/ui/switch";
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-  instructorStatus = false;
-  buttonClicked = false;
-  identity : string = null;
+  private instructorStatus = false;
+  private showForm = false;
+  private identity : string = null;
 
   constructor() { }
 
@@ -21,9 +21,7 @@ export class RegistrationComponent implements OnInit {
 
   setRegistrantIdentity(identity: string){
     this.identity = identity;
-    console.log("Identity is " + identity);
-    this.buttonClicked = true;
-    alert("Identity is " + identity);
+    this.revealForm(true);
   }
 
   createUser(){
@@ -33,6 +31,10 @@ export class RegistrationComponent implements OnInit {
       // uer = new Instructor(p1,p2,p3, p4,p5);
     }
     //OR user = new User(p1,p2,p3);
+  }
+
+  revealForm(booleanStatus: boolean){
+    this.showForm = booleanStatus;
   }
 
 }

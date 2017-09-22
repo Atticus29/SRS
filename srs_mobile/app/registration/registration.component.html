@@ -2,19 +2,19 @@
 </ActionBar>
 
 <StackLayout>
-  <Button class="submit-button" text="Register as student" (tap)="setRegistrantIdentity('student')"></Button>
-  <Button class="submit-button" text="Register as instructor" (tap)="setRegistrantIdentity('instructor')"></Button>
-  <div *ngIf="buttonClicked">
+  <div *ngIf="!showForm">
+    <Button class="submit-button" text="Register as student" (tap)="setRegistrantIdentity('student')"></Button>
+    <Button class="submit-button" text="Register as instructor" (tap)="setRegistrantIdentity('instructor')"></Button>
+  </div>
+  <div *ngIf="showForm">
     <TextField hint="Email Address" keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
     <TextField hint="Display Name"></TextField>
     <TextField hint="Full Name"></TextField>
     <TextField hint="Password" secure="true"></TextField>
     <TextField hint="Verify Password" secure="true"></TextField>
-    <GridLayout rows="auto auto auto" columns="* auto" class="m-5">
-      <label class="h3 m-15" row="0" col="0" text="Instructor?"></label>
-      <Switch class="m-15" row="0" col="1" text="Instructor?" checked="{{ instuctorStatus }}"></Switch>
-    </GridLayout>
     <Button class="submit-button" text="Register"></Button>
+    <Button class="submit-button" text="Cancel" (tap)="revealForm(false)"></Button>
+
   </div>
 
 </StackLayout>
