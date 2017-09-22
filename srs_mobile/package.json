@@ -4,9 +4,9 @@
 	"readme": "NativeScript Application",
 	"repository": "<fill-your-repository-here>",
 	"nativescript": {
-		"id": "org.nativescript.test1",
+		"id": "org.nativescript.srsmobile",
 		"tns-android": {
-			"version": "3.2.0"
+			"version": "3.2.0-2017-7-12-1"
 		},
 		"tns-ios": {
 			"version": "3.2.0"
@@ -26,7 +26,7 @@
 		"nativescript-unit-test-runner": "^0.3.4",
 		"reflect-metadata": "~0.1.8",
 		"rxjs": "~5.4.2",
-		"tns-core-modules": "~3.1.0",
+		"tns-core-modules": "3.3.0-2017-9-9-1",
 		"zone.js": "~0.8.2"
 	},
 	"devDependencies": {
