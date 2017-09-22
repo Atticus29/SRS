@@ -5,7 +5,7 @@ import * as switchModule from "tns-core-modules/ui/switch";
   moduleId: module.id,
   selector: 'ns-registration',
   templateUrl: './registration.component.html',
-  styleUrls: ['./registration.component.scss']
+  styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
   instructorStatus = false;
