@@ -7,13 +7,22 @@
     <Button class="submit-button" text="Register as instructor" (tap)="setRegistrantIdentity('instructor')"></Button>
   </div>
   <div *ngIf="showForm">
-    <TextField hint="Email Address" keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
-    <TextField hint="Display Name"></TextField>
-    <TextField hint="Full Name"></TextField>
-    <TextField hint="Password" secure="true"></TextField>
-    <TextField hint="Verify Password" secure="true"></TextField>
-    <Button class="submit-button" text="Register"></Button>
-    <Button class="submit-button" text="Cancel" (tap)="revealForm(false)"></Button>
+    <TextField hint="Email Address" keyboardType="email" autocorrect="false" autocapitalizationType="none" [(ngModel)]="email" >
+    </TextField>
+    <TextField hint="Display Name" [(ngModel)]="displayName">
+    </TextField>
+    <TextField hint="Full Name" [(ngModel)]="fullName">
+    </TextField>
+    <TextField hint="Password" secure="true" [(ngModel)]="password">
+    </TextField>
+    <TextField hint="Verify Password" secure="true" [(ngModel)]="confirmPassword">
+    </TextField>
+    <Button class="submit-button" text="Register" (tap)="createUser()">
+    </Button>
+    <Button class="submit-button" text="Cancel" (tap)="revealForm(false)">
+    </Button>
+    <Button class="submit-button" text="Cancel2" (tap)="revealForm(false)">
+    </Button>
 
   </div>
 

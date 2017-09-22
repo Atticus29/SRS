@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isValidEmail = function (email) {
+    return false; //TODO
+};
+exports.isSamePassword = function (password, confirmPassword) {
+    return password === confirmPassword && password != null && confirmPassword != null;
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXRpbGl0aWVzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsidXRpbGl0aWVzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQVcsUUFBQSxZQUFZLEdBQUcsVUFBUyxLQUFhO0lBQzlDLE1BQU0sQ0FBQyxLQUFLLENBQUMsQ0FBQyxNQUFNO0FBQ3RCLENBQUMsQ0FBQTtBQUVVLFFBQUEsY0FBYyxHQUFHLFVBQVUsUUFBZ0IsRUFBRSxlQUF1QjtJQUM3RSxNQUFNLENBQUMsUUFBUSxLQUFLLGVBQWUsSUFBSSxRQUFRLElBQUksSUFBSSxJQUFJLGVBQWUsSUFBSSxJQUFJLENBQUM7QUFDckYsQ0FBQyxDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGxldCBpc1ZhbGlkRW1haWwgPSBmdW5jdGlvbihlbWFpbDogc3RyaW5nKXtcbiAgcmV0dXJuIGZhbHNlOyAvL1RPRE9cbn1cblxuZXhwb3J0IGxldCBpc1NhbWVQYXNzd29yZCA9IGZ1bmN0aW9uIChwYXNzd29yZDogc3RyaW5nLCBjb25maXJtUGFzc3dvcmQ6IHN0cmluZyl7XG4gIHJldHVybiBwYXNzd29yZCA9PT0gY29uZmlybVBhc3N3b3JkICYmIHBhc3N3b3JkICE9IG51bGwgJiYgY29uZmlybVBhc3N3b3JkICE9IG51bGw7XG59XG4iXX0=
