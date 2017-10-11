@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as switchModule from "tns-core-modules/ui/switch";
-import { isSamePassword, isValidEmail } from "../utilities/utilities";
+import { isValidPassword, isValidEmail } from "../utilities/utilities";
 
 @Component({
   moduleId: module.id,
@@ -31,10 +31,10 @@ export class RegistrationComponent implements OnInit {
   }
 
   createUser(){
-    if(isValidEmail(this.email)){
-      alert("Valid email");
+    if(!isValidEmail(this.email)){
+      alert("Please enter a valid email");
     }
-    if (isSamePassword(this.password, this.confirmPassword)){
+    if (!isValidPassword(this.password, this.confirmPassword)){
       alert("Valid password!");
     }
     if(this.identity === "student"){
@@ -50,3 +50,5 @@ export class RegistrationComponent implements OnInit {
   }
 
 }
+
+

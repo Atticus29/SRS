@@ -9,3 +9,5 @@ describe('Student hi name method', () => {
     assert.equal(newStudent.getName(),"Chance");
   });
 });
+
+
