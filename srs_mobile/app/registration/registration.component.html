@@ -7,17 +7,28 @@
     <Button class="submit-button" text="Register as instructor" (tap)="setRegistrantIdentity('instructor')"></Button>
   </div>
   <div *ngIf="showForm">
-    <TextField hint="Email Address" [(ngModel)]="email" keyboardType="email" autocorrect="false" autocapitalizationType="none" >
+    <TextField  hint="Email Address" [(ngModel)]="email" keyboardType="email" autocorrect="false" autocapitalizationType="none" >
     </TextField>
-    <TextField hint="Display Name" >
+    <TextField  *ngIf="isDirty(email)" [text]="updateEmailInputStatus()">
     </TextField>
-    <TextField hint="Full Name" >
+
+    <TextField hint="Display Name" [(ngModel)]="displayName">
     </TextField>
-    <TextField hint="Password" #password >
+    <TextField  *ngIf="isDirty(displayName)" [text]="updateDisplayNameInputStatus()">
     </TextField>
-    <TextField hint="Verify Password" #confirmPassword >
+
+    <TextField hint="Full Name" [(ngModel)]="fullName">
     </TextField>
-    <TextField [text]="updateInputStatus()"></TextField>
+    <TextField  *ngIf="isDirty(fullName)" [text]="updateFullNameInputStatus()">
+    </TextField>
+
+    <!-- <TextField hint="Password" #password >
+    </TextField>
+    <TextField  *ngIf="isDirty(password)" [text]="updatePasswordInputStatus()">
+    </TextField> --> 
+    
+    <!-- <TextField hint="Verify Password" #confirmPassword >
+    </TextField>
     <Button *ngIf="inputsValid()" class="submit-button" text="Register" (tap)="createUser()">
     </Button>
     <Button class="submit-button" text="Cancel" (tap)="revealForm(false)">
